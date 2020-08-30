@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="BuscarProducto" type="tns:BuscarProducto"/>
+
+<xs:element name="BuscarProductoResponse" type="tns:BuscarProductoResponse"/>
+
+<xs:element name="InfoClientes" type="tns:InfoClientes"/>
+
+<xs:element name="InfoClientesResponse" type="tns:InfoClientesResponse"/>
+
+<xs:element name="InfoProducto" type="tns:InfoProducto"/>
+
+<xs:element name="InfoProductoResponse" type="tns:InfoProductoResponse"/>
+
+<xs:element name="InsertarVenta" type="tns:InsertarVenta"/>
+
+<xs:element name="InsertarVentaResponse" type="tns:InsertarVentaResponse"/>
+
+<xs:element name="ListaCategorias" type="tns:ListaCategorias"/>
+
+<xs:element name="ListaCategoriasResponse" type="tns:ListaCategoriasResponse"/>
+
+<xs:element name="ListaProductos" type="tns:ListaProductos"/>
+
+<xs:element name="ListaProductosResponse" type="tns:ListaProductosResponse"/>
+
+<xs:element name="NumeroFilas" type="tns:NumeroFilas"/>
+
+<xs:element name="NumeroFilasResponse" type="tns:NumeroFilasResponse"/>
+
+<xs:element name="VerificaUsuario" type="tns:VerificaUsuario"/>
+
+<xs:element name="VerificaUsuarioResponse" type="tns:VerificaUsuarioResponse"/>
+
+<xs:complexType name="NumeroFilas">
+<xs:sequence>
+<xs:element name="p1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NumeroFilasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertarVenta">
+<xs:sequence>
+<xs:element name="p1" type="xs:string" minOccurs="0"/>
+<xs:element name="p2" type="xs:string" minOccurs="0"/>
+<xs:element name="p3" type="xs:string" minOccurs="0"/>
+<xs:element name="p4" type="xs:double" minOccurs="0"/>
+<xs:element name="p5" type="xs:unsignedShort"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertarVentaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListaProductos">
+<xs:sequence>
+<xs:element name="p1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListaProductosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:productos" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productos">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="estado" type="xs:unsignedShort"/>
+<xs:element name="idCategoria" type="xs:string" minOccurs="0"/>
+<xs:element name="idProducto" type="xs:string" minOccurs="0"/>
+<xs:element name="imagen" type="xs:string" minOccurs="0"/>
+<xs:element name="precioUnidad" type="xs:double"/>
+<xs:element name="stock" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InfoClientes">
+<xs:sequence>
+<xs:element name="p1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InfoClientesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clientes" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clientes">
+<xs:sequence>
+<xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="estado" type="xs:unsignedShort"/>
+<xs:element name="fechaNacimiento" type="xs:string" minOccurs="0"/>
+<xs:element name="idCliente" type="xs:string" minOccurs="0"/>
+<xs:element name="nombres" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="sexo" type="xs:unsignedShort"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InfoProducto">
+<xs:sequence>
+<xs:element name="p1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InfoProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:productos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="VerificaUsuario">
+<xs:sequence>
+<xs:element name="p1" type="xs:string" minOccurs="0"/>
+<xs:element name="p2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="VerificaUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListaCategorias">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ListaCategoriasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:categorias" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="categorias">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="estado" type="xs:unsignedShort"/>
+<xs:element name="idCategoria" type="xs:string" minOccurs="0"/>
+<xs:element name="imagen" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarProducto">
+<xs:sequence>
+<xs:element name="p1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:productos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

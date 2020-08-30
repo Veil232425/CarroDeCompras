@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:9999/carritoCompra2_Servidor/Servicios?wsdl" uri="wsdl/localhost_9999/carritoCompra2_Servidor/Servicios.wsdl"/>
+    <system systemId="http://localhost:9999/carritoCompra2_Servidor/Servicios?xsd=1" uri="wsdl/localhost_9999/carritoCompra2_Servidor/Servicios.xsd_1.xsd"/>
+</catalog>
